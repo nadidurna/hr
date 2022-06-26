@@ -1,6 +1,6 @@
 İnsan Kaynakları Uygulaması
 
-Bu projenin ```"API"``` katmanı ```"ASP.NetCore Web API"``` oluşturulmuştur.```"Code First"``` anlayışı benimsenmiştir. Veri işlemlerinde ```"Microsoft.EntityFrameWork"``` kütüphanesi kullanılmıştır. "SOLID" prensibleri kabul edilmiştir.
+Bu projenin ```"API"``` katmanı ```"ASP.NetCore Web API"``` oluşturulmuştur.```"Code First"``` anlayışı benimsenmiştir. Veri işlemlerinde ```"Microsoft.EntityFrameWork"``` kütüphanesi kullanılmıştır. ```"SOLID"``` prensibleri kabul edilmiştir.
 Front-End tarafı ```"Vue.js"``` ile geliştirilmiştir.
 
 
@@ -17,7 +17,7 @@ Projenin kurulumu ve çalıştırılması için gerekli açıklama dosyaları ve
 
 Human Resources Application
 
-The ```"API"``` layer of this project was created ```"ASP.NetCore Web API"```. ```"Code First"``` approach is adopted. ```"Microsoft.EntityFrameWork"``` library is used in data processing. "SOLID" principles have been adopted. Front-End side is developed with "Vue.js".
+The ```"API"``` layer of this project was created ```"ASP.NetCore Web API"```. ```"Code First"``` approach is adopted. ```"Microsoft.EntityFrameWork"``` library is used in data processing. ```"SOLID"``` principles have been adopted. Front-End side is developed with ```"Vue.js"```.
 
 
 This project has been designed as ```"Company Manager"```, ```"Site Manager"```, ```"Personnel"``` in three stages on a general scale. 
