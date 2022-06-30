@@ -1,4 +1,6 @@
-﻿namespace Circle.Data.Context;
+﻿using Circle.Entities.Main;
+
+namespace Circle.Data.Context;
 
 public class CircleDbContext : DbContext
 {
@@ -7,4 +9,6 @@ public class CircleDbContext : DbContext
     }
 
     //public DbSet<Entity> Entities {get; set;}
+    public DbSet<Lookup> Lookups { get; set; }
+    public DbSet<LookupType> LookupTypes { get; set; }
 }
