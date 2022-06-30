@@ -13,3 +13,5 @@ namespace Circle.Common.Enums
         NotSpecified
     }
 }
+ 
+
