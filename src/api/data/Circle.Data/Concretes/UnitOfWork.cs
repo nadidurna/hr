@@ -13,10 +13,9 @@
         {
             return new Repository<T>(dbContext);
         }
-
-        public Task<int> SaveChanges(CancellationToken cancellationToken)
+        public int SaveChanges()
         {
-            return dbContext.SaveChangesAsync(cancellationToken);
+            return dbContext.SaveChanges();
         }
     }
 }
