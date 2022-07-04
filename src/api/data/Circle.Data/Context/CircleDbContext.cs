@@ -1,5 +1,8 @@
-﻿using Circle.Entities.Main;
+﻿using Circle.Entities.Associate;
+using Circle.Entities.Foundation;
+using Circle.Entities.Main;
 using Circle.Entities.Profile;
+using Circle.Entities.Usage;
 
 namespace Circle.Data.Context;
 
@@ -9,9 +12,11 @@ public class CircleDbContext : DbContext
     {
     }
 
-    //public DbSet<Entity> Entities {get; set;}
     public DbSet<Lookup> Lookups { get; set; }
     public DbSet<LookupType> LookupTypes { get; set; }
-    public DbSet<CompanyManager> CompanyManagers { get; set; }
-    public DbSet<Employee> Employees { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Company> Companies { get; set; }
+    public DbSet<CompanyUser> CompanyUsers { get; set; }
+    public DbSet<Permit> Permits { get; set; }
+    public DbSet<Debit> Debits { get; set; }
 }
