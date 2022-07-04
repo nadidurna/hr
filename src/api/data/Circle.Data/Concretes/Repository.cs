@@ -9,12 +9,6 @@
             this.dbContext = dbContext;
         }
 
-        public void Delete(Guid id)
-        {
-            var entity = Get(id);
-            entity.IsDeleted = true;
-            Update(entity);
-        }
 
         public void Delete(T entity)
         {
@@ -22,19 +16,19 @@
             Update(entity);
         }
 
-        public T Get(Guid id)
+        public Task<T> Get(Guid id,CancellationToken cancellationToken)
         {
-            return dbContext.Set<T>().SingleOrDefault(f => f.Id == id);
+            return dbContext.Set<T>().SingleOrDefaultAsync(f => f.Id == id, cancellationToken);
         }
 
-        public T Get(Expression<Func<T, bool>> predicate)
+        public Task<T> Get(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
         {
-            return dbContext.Set<T>().SingleOrDefault(predicate);
+            return dbContext.Set<T>().SingleOrDefaultAsync(predicate, cancellationToken);
         }
 
-        public List<T> GetAll(Expression<Func<T, bool>> predicate)
+        public Task<List<T>> GetAll(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
         {
-            return dbContext.Set<T>().Where(predicate).ToList();
+            return dbContext.Set<T>().Where(predicate).ToListAsync(cancellationToken);
         }
 
         public void Insert(T entity)

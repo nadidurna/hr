@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\data\Circle.Data\Circle.Data.csproj" />
+    <ProjectReference Include="..\..\Circle.Data.Requests\Circle.Data.Requests.csproj" />
+  </ItemGroup>
+
+</Project>

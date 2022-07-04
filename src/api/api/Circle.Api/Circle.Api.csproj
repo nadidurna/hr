@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\common\Circle.Common\Circle.Common.csproj" />
     <ProjectReference Include="..\..\data\Circle.Data\Circle.Data.csproj" />
+    <ProjectReference Include="..\..\services\Circle.Data.Services\Circle.Data.Services.csproj" />
   </ItemGroup>
 
 </Project>

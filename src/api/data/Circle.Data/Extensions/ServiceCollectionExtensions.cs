@@ -1,4 +1,5 @@
 ﻿using Circle.Common;
+using Circle.Data.Concretes;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -13,6 +14,7 @@ public static class ServiceCollectionExtensions
             builder.UseSqlServer(settings.ConnectionString);
         });
         services.AddScoped<DbContext, CircleDbContext>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
         return services;
     }
 }

@@ -30,7 +30,7 @@ namespace Circle.Entities.Profile
        
         [MaxLength(24)]
         public string Phone { get; set; }
-        public Gender gender { get; set; }
+        public Gender Gender { get; set; }
       
         [Required]
         [MaxLength(64)]

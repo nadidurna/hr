@@ -2,17 +2,15 @@
 {
     public interface IRepository<T> where T : EntityBase
     {
-        T Get(Guid id);
+        Task<T> Get(Guid id,CancellationToken cancellationToken);
 
-        T Get(Expression<Func<T, bool>> predicate);
+        Task<T> Get(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
 
-        List<T> GetAll(Expression<Func<T, bool>> predicate);
+        Task<List<T>> GetAll(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
 
         void Insert(T entity);
 
         void Update(T entity);
-
-        void Delete(Guid id);
 
         void Delete(T entity);
     }
