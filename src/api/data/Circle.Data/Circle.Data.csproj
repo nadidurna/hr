@@ -22,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\..\common\Circle.Common\Circle.Common.csproj" />
+	<ProjectReference Include="..\..\services\Circle.Mapper\Circle.Mapper.csproj" />
+	<ProjectReference Include="..\Circle.Data.Seed\Circle.Data.Seed.csproj" />
 	<ProjectReference Include="..\Circle.Entities\Circle.Entities.csproj" />
   </ItemGroup>
 

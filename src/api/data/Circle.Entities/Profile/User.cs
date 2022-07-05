@@ -12,7 +12,7 @@ namespace Circle.Entities.Profile
         public string UserName { get; set; }
         [Required]
         [MaxLength(36)]
-        public string Email { get; set; }
+        public string EMail { get; set; }
         [Required]
         [MaxLength(36)]
         public string Password { get; set; }

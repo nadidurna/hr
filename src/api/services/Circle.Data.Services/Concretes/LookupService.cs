@@ -1,4 +1,5 @@
-﻿using Circle.Data.Query.Requests;
+﻿using Circle.Data.Requests.ManagementContracts;
+using Circle.Data.Requests.Queries.ManagementQueries;
 
 namespace Circle.Data.Services.Concretes
 {
@@ -8,14 +9,12 @@ namespace Circle.Data.Services.Concretes
 
         public LookupService(IMediator mediator)
         {
-
             this.mediator = mediator;
         }
 
-        public Task<List<Lookup>> GetLookups(CancellationToken cancellationToken)
+        public Task<LookupDto> GetById(Guid id, CancellationToken cancellationToken)
         {
-            return mediator.Send(new GetLookupRequest(), cancellationToken);
+            return mediator.Send(new GetLookupByIdRequest(id), cancellationToken);
         }
-
-    }        
+    }
 }

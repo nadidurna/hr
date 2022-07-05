@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Circle.Data.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -106,7 +106,7 @@ namespace Circle.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(24)", maxLength: 24, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
+                    EMail = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     VerificationId = table.Column<string>(type: "nvarchar(36)", maxLength: 36, nullable: false),
@@ -318,6 +318,8 @@ namespace Circle.Data.Migrations
                 schema: "Profile",
                 table: "Users",
                 column: "CountryId");
+            migrationBuilder.MigrateUsers();
+            migrationBuilder.MigrateLookups();
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\data\Circle.Data\Circle.Data.csproj" />
+    <ProjectReference Include="..\..\Circle.Data.Requests\Circle.Data.Requests.csproj" />
+  </ItemGroup>
+
 </Project>

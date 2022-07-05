@@ -1,7 +1,9 @@
-﻿namespace Circle.Data.Services.Abstractions
+﻿using Circle.Data.Requests.ManagementContracts;
+
+namespace Circle.Data.Services.Abstractions
 {
     public interface ILookupService
     {
-        Task<List<Lookup>> GetLookups(CancellationToken cancellationToken);
+        Task<LookupDto> GetById(Guid id, CancellationToken cancellationToken);
     }
 }

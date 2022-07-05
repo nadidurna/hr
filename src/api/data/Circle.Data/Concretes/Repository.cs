@@ -1,12 +1,17 @@
-﻿namespace Circle.Data.Concretes
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+
+namespace Circle.Data.Concretes
 {
     internal class Repository<T> : IRepository<T> where T : EntityBase
     {
         private readonly DbContext dbContext;
+        private readonly IMapper mapper;
 
-        public Repository(DbContext dbContext)
+        public Repository(DbContext dbContext, IMapper mapper)
         {
             this.dbContext = dbContext;
+            this.mapper = mapper;
         }
 
 
@@ -24,6 +29,11 @@
         public Task<T> Get(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
         {
             return dbContext.Set<T>().SingleOrDefaultAsync(predicate, cancellationToken);
+        }
+
+        public Task<TDto> Get<TDto>(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
+        {
+            return dbContext.Set<T>().Where(predicate).ProjectTo<TDto>(mapper.ConfigurationProvider).SingleOrDefaultAsync(cancellationToken);
         }
 
         public Task<List<T>> GetAll(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)

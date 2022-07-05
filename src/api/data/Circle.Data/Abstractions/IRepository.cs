@@ -4,7 +4,7 @@
     {
         Task<T> Get(Guid id,CancellationToken cancellationToken);
 
-        Task<T> Get(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
+        Task<TDto> Get<TDto>(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
 
         Task<List<T>> GetAll(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
 

@@ -14,7 +14,7 @@ namespace Circle.Entities.Usage
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
         public bool IsApproved { get; set; }
-        public Guid ManagerId { get; set; }
+        public Guid? ManagerId { get; set; }
         [ForeignKey(nameof(UserId))]
         public User User { get; set; }
         [ForeignKey(nameof(PermitTypeId))]

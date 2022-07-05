@@ -10,8 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\data\Circle.Data\Circle.Data.csproj" />
-    <ProjectReference Include="..\Circle.Data.Requests\Circle.Data.Requests.csproj" />
     <ProjectReference Include="..\Commands\Circle.Data.Managemet.Commands\Circle.Data.Managemet.Commands.csproj" />
     <ProjectReference Include="..\Queries\Circle.Data.Management.Queries\Circle.Data.Management.Queries.csproj" />
   </ItemGroup>

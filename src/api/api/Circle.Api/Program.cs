@@ -1,15 +1,15 @@
-using Circle.Common;
-
-using Micrososft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
 builder.Services.Configure<Settings>(builder.Configuration.GetSection(nameof(Settings)));
+
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddData(builder.Configuration)
-                .AddDataServices();
+                .AddDataServices()
+                .AddAutoMapper();
 
 var app = builder.Build();
 
