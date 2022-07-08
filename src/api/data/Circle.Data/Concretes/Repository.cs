@@ -36,18 +36,23 @@ namespace Circle.Data.Concretes
             return dbContext.Set<T>().Where(predicate).ProjectTo<TDto>(mapper.ConfigurationProvider).SingleOrDefaultAsync(cancellationToken);
         }
 
-        public Task<List<T>> GetAll(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
+        public Task<List<TDto>> GetAll<TDto>(Expression<Func<T, bool>> predicate,Expression<Func<TDto,object>>order, CancellationToken cancellationToken)
         {
-            return dbContext.Set<T>().Where(predicate).ToListAsync(cancellationToken);
+            return dbContext.Set<T>().Where(predicate).ProjectTo<TDto>(mapper.ConfigurationProvider).OrderBy(order).ToListAsync(cancellationToken);
         }
 
         public void Insert(T entity)
         {
+            entity.IsDeleted = false;
+            entity.IsActive = true;
+            entity.CreatedAt = DateTime.Now;
+            entity.ModifiedAt = DateTime.Now;
             dbContext.Set<T>().Add(entity);
         }
 
         public void Update(T entity)
         {
+            entity.ModifiedAt = DateTime.Now;
             dbContext.Set<T>().Update(entity);
         }
     }

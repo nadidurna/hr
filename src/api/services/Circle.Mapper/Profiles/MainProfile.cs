@@ -9,6 +9,11 @@ namespace Circle.Mapper.Profiles
         public MainProfile()
         {
             CreateMap<Lookup, LookupDto>();
+            CreateMap<NewLookupRequestDto, Lookup>();
+            CreateMap<UpdateLookupRequestDto, Lookup>();
+            CreateMap<LookupType, LookupTypeDto>();
+            CreateMap<NewLookupTypeRequestDto, LookupType>();
+            CreateMap<UpdateLookupTypeRequestDto, LookupType>();
         }
     }
 }

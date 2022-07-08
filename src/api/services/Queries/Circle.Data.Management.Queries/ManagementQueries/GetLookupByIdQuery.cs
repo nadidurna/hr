@@ -21,7 +21,8 @@ namespace Circle.Data.Management.Queries.ManagementQueries
         public async Task<LookupDto> Handle(GetLookupByIdRequest request, CancellationToken cancellationToken)
         {
             var repository = unitOfWork.GetRepository<Lookup>();
-            return await repository.Get<LookupDto>(f => !f.IsDeleted && f.Id == request.Id, cancellationToken);
+            var result=  await repository.Get<LookupDto>(f => !f.IsDeleted && f.Id == request.Id, cancellationToken);
+            return result;
         }
     }
 }
