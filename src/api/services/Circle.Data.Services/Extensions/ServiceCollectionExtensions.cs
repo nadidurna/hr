@@ -7,6 +7,8 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddDataServices(this IServiceCollection services)
     {
         services.AddScoped<ILookupService, LookupService>();
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddScoped<ILookupTypeService, LookupTypeService>();
 
 

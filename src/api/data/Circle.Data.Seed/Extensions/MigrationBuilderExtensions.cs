@@ -13,8 +13,8 @@ public static class MigrationBuilderExtensions
                                        "Id","UserName","EMail","Password","PasswordHash","VerificationId","Type","Gender","Address","CountryId","CityId","Phone","IsActive","IsDeleted","CreatedAt","CreatedBy","ModifiedAt","ModifiedBy"
                                    },
                                    new object[,]
-                                   {
-                                       {ConstantIds.User.AdminId,"admin","admin@circle.com","123.","AdminHashValue","123123.",0,2,"Türkiye/Istanbul",null,null,"05325320000",true,false,DateTime.Now,null,DateTime.Now,null, }
+                                   {//123.
+                                       {ConstantIds.User.AdminId,"admin","admin@circle.com","fc7e5247559cf63a101a236fdb026282","AdminHashValue","123123.",0,2,"Türkiye/Istanbul",null,null,"05325320000",true,false,DateTime.Now,null,DateTime.Now,null, }
                                    },
                                    schema: "Profile");
     }

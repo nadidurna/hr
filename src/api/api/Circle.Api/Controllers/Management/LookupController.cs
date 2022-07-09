@@ -1,10 +1,14 @@
 ﻿using Circle.Data.Requests.ManagementContracts;
 using Circle.Data.Services.Abstractions;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Circle.Api.Controllers.Management
 {
     [Route("api/management/[controller]")]
     [ApiController]
+    //[Authorize]
     public class LookupController : ControllerBase
     {
         private readonly ILookupService service;

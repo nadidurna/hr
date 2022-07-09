@@ -7,11 +7,13 @@ namespace Circle.Data.Concretes
     {
         private readonly DbContext dbContext;
         private readonly IMapper mapper;
+        private readonly IClaims claims;
 
-        public Repository(DbContext dbContext, IMapper mapper)
+        public Repository(DbContext dbContext, IMapper mapper, IClaims claims)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;
+            this.claims = claims;
         }
 
 
@@ -43,6 +45,13 @@ namespace Circle.Data.Concretes
 
         public void Insert(T entity)
         {
+
+
+            if (claims.IsAuthenticated)
+            {
+                entity.CreatedBy = claims.CurrentUser.Id;
+                entity.ModifiedBy = claims.CurrentUser.Id;
+            }
             entity.IsDeleted = false;
             entity.IsActive = true;
             entity.CreatedAt = DateTime.Now;
@@ -52,6 +61,10 @@ namespace Circle.Data.Concretes
 
         public void Update(T entity)
         {
+            if (claims.IsAuthenticated)
+            {
+                entity.ModifiedBy = claims.CurrentUser.Id;
+            }
             entity.ModifiedAt = DateTime.Now;
             dbContext.Set<T>().Update(entity);
         }
