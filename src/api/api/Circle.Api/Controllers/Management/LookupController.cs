@@ -25,6 +25,12 @@ namespace Circle.Api.Controllers.Management
             return Ok(result);
         }
 
+        [HttpGet("ping")]
+        public IActionResult Ping()
+        {
+            return Ok("pong");
+        }
+
         [HttpGet("list")]
         public async Task<IActionResult> GetLookups(CancellationToken cancellationToken)
         {
