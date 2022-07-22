@@ -4,8 +4,8 @@
     <div id="content-wrapper">
       <Header />
       <div class="container-fluid"></div>
-      <div class="content"></div>
-      <footer class="sticky-footer bg-white"><Footer /></footer>
+      <div class="content"><RouterView /></div>
+      <Footer />
     </div>
   </div>
 </template>
@@ -17,7 +17,7 @@ import Header from "./components/Header.vue";
 import Sidebar from "./components/Sidebar.vue";
 
 export default {
-  name: "Admin",
+  name: "App",
   components: {
     Footer,
     Header,
@@ -25,3 +25,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.content {
+  margin: 20px;
+}
+</style>

@@ -8,10 +8,11 @@
       <!-- Sidebar - Brand -->
       <a
         class="sidebar-brand d-flex align-items-center justify-content-center"
-        href="index.html"
+        href="/"
       >
-        <div class="sidebar-brand-icon rotate-n-15"></div>
-        <div class="sidebar-brand-text">Circle Human Resources</div>
+        <div class="sidebar-brand-text">
+          <img src="../assets/circle_logo.svg" alt="" />
+        </div>
       </a>
 
       <!-- Divider -->
@@ -19,10 +20,13 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-arrow-alt-circle-down"></i>/////değişecek
-          <span>Home</span></a
-        >
+        <a class="nav-link" href="/"> <span>Home</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login"> <span>Login</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/register"> <span>Register</span></a>
       </li>
 
       <!-- Divider -->
@@ -107,3 +111,9 @@
     <div id="content-wrapper" class="d-flex flex-column"></div>
   </div>
 </template>
+
+<style>
+.wrapper {
+  position: fixed;
+}
+</style>

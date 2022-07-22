@@ -202,7 +202,7 @@
             >
               Cancel
             </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <a class="btn btn-primary" href="/login">Logout</a>
           </div>
         </div>
       </div>

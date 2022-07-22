@@ -41,10 +41,7 @@
                         >
                       </div>
                     </div>
-                    <a
-                      href="index.html"
-                      class="btn btn-primary btn-user btn-block"
-                    >
+                    <a href="/" class="btn btn-primary btn-user btn-block">
                       Login
                     </a>
                     <hr />
@@ -69,7 +66,7 @@
                     >
                   </div>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="/register">Create an Account!</a>
                   </div>
                 </div>
               </div>

@@ -164,7 +164,7 @@ section {
   list-style: none;
 }
 img {
-  width: 100%;
+  width: 50%;
 }
 .anim04c {
   -webkit-transition: all 0.4s cubic-bezier(0.5, 0.35, 0.15, 1.4);
