@@ -16,6 +16,7 @@ namespace Circle.Api.Controllers
         {
             this.service = service;
         }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto data, CancellationToken cancellationToken)
         {
@@ -26,7 +27,5 @@ namespace Circle.Api.Controllers
             }
             return Ok(result);
         }
-
- 
     }
 }

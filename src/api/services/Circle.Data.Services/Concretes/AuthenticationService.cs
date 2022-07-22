@@ -16,6 +16,7 @@ namespace Circle.Data.Services.Concretes
         {
             this.mediator = mediator;
         }
+
         public Task<LoginResultDto> LoginUser(LoginRequestDto data, CancellationToken cancellationToken)
         {
             return mediator.Send(new LoginUserRequest(data), cancellationToken);
