@@ -28,6 +28,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="/register"> <span>Register</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/companies"> <span>Şirketler</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider" />

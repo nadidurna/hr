@@ -9,6 +9,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<ILookupService, LookupService>();
         services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddScoped<ILookupTypeService, LookupTypeService>();
+        services.AddScoped<IManagementService, ManagementService>();
 
         var queriesAssembly = AppDomain.CurrentDomain.Load("Circle.Data.Management.Queries");
         var commandsAssembly = AppDomain.CurrentDomain.Load("Circle.Data.Managemet.Commands");

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Circle.Data.Requests.ManagementContracts;
+using Circle.Entities.Foundation;
 using Circle.Entities.Main;
 
 namespace Circle.Mapper.Profiles
@@ -13,7 +14,10 @@ namespace Circle.Mapper.Profiles
             CreateMap<UpdateLookupRequestDto, Lookup>();
             CreateMap<LookupType, LookupTypeDto>();
             CreateMap<NewLookupTypeRequestDto, LookupType>();
+            CreateMap<NewCompanyRequestDto, Company>();
             CreateMap<UpdateLookupTypeRequestDto, LookupType>();
+            CreateMap<Company,CompanyDto>();
+            CreateMap<UpdateCompanyRequestDto, Company>();
         }
     }
 }
