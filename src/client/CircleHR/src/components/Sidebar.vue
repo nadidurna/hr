@@ -11,7 +11,7 @@
         href="/"
       >
         <div class="sidebar-brand-text">
-          <img src="../assets/circle_logo.svg" alt="" />
+          <img src="../../public/assets/circle_logo.svg" alt="" />
         </div>
       </a>
 
@@ -48,7 +48,7 @@
           aria-expanded="true"
           aria-controls="collapseTwo"
         >
-          <i class="fas fa-fw fa-cog"></i>
+          <i class="fas fa-fw fa-cog mr-2"></i>
           <span>Components</span>
         </a>
         <div
@@ -75,7 +75,7 @@
           aria-expanded="true"
           aria-controls="collapseUtilities"
         >
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-fw fa-wrench mr-2"></i>
           <span>Utilities</span>
         </a>
         <div
@@ -96,7 +96,7 @@
           aria-expanded="true"
           aria-controls="collapseCalendar"
         >
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-fw fa-wrench mr-2"></i>
           <span>Calendar</span>
         </a>
         <div
