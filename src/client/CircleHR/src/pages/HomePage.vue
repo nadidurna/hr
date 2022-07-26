@@ -1,1 +1,1 @@
-<template>Hoşgeldiniz 5 gittiniz...</template>
+<template>Hoşgeldiniz gitmediniz...</template>
