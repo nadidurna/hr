@@ -27,7 +27,11 @@ The explanation files and resources required for the installation and running of
 -..
 -..
 
+<p>
+  
 graph LR
 A{WEB} --Connection Loss--> C(Voting)
 A --> D(Emoji)
 B(Vote Bot) --> A
+
+<p/>
