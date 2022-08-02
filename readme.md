@@ -26,3 +26,8 @@ The features and use of the project differ at each level.
 The explanation files and resources required for the installation and running of the project are explained in detail in the links below :
 -..
 -..
+
+graph LR
+A{WEB} --Connection Loss--> C(Voting)
+A --> D(Emoji)
+B(Vote Bot) --> A
